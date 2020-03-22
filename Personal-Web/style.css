@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+body{background: url(bg.jpg) no-repeat;
+    position: relative;
+    background-size: cover ;
+    height: 100vh;
+    width: 100vw;
+
+}   
+
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 20px;
+	left: 0;
+	background: rgba(0,0,0,0.4);
+}
+
+.navbar h1{
+    color: white;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bolder;
+    border: 5px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+
+}
+
+.navbar ul{
+	right: 0px;
+    margin-right: 20px;
+    position: absolute;
+    bottom: 10px;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 60px;
+}
+.navbar ul li a{
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	padding: 6px ;
+	text-decoration: none;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+	background: rgb(204, 204, 204);
+	border-radius: 2px;
+}
+.middle{position: relative;
+    display: grid;
+    grid-template-columns: 33.3vw 33.3vw 33.3vw;
+    grid-template-rows: 200px 200px;
+    top:30vh;
+    overflow: show;
+    background: rgba(128, 128, 128, 0.473);
+}
+
+.box1 img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.box1{
+   
+    grid-row: 1/3;
+    position: relative;
+    background: rgba(255,255,255,0.4);
+}
+
+.box2{
+    
+    position: relative;
+    z-index: 0;
+
+}
+
+.box3{
+
+    position: relative;
+    z-index: 0;
+    
+}
+
+.box4{
+    
+    grid-column: 2/3;
+    position: relative;
+    z-index: 0;
+}
+
+.box5{
+    
+    grid-column: 3/4;
+    position: relative;
+    z-index: 0;
+}
+
+
+.box1 img{
+    position: absolute;
+    padding: 10px;
+    top: 0px;
+    left: 0px;
+} 
+.box1 h1{font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    left: 50px;
+    padding: 10px;
+    top: 30px;
+
+}
+
+.box1 p{font-size: 22.5px;
+    position: absolute;
+    left: 0px;
+    padding: 10px;
+    top: 80px;
+    text-align: justify;
+    font-weight: bold;
+}
+.content{
+    height: 100%;
+    width:100% ;
+    overflow:hidden;
+    position: absolute;
+    z-index: 0;
+}
+.content h2,h3,h4,h5 {font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    padding: 10px;
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: 1.5s ease;
+    z-index:0 ;
+    background: rgba(212, 212, 212, 0.685);
+    text-align: center;
+
+}
+
+.box2:hover .content h2{opacity: 0} 
+.box3:hover .content h2{opacity: 0}
+.box4:hover .content h2{opacity: 0}
+.box5:hover .content h2{opacity: 0}
+
+
+.box2:hover .slides {opacity: 1} 
+.box3:hover .slides {opacity: 1}
+.box4:hover .slides {opacity: 1}
+.box5:hover .slides {opacity: 1}
+
+.navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+.bar{
+    width: 20px;
+    height: 5px;
+    border: 1px solid #fff;
+    margin: 3px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+.bar:hover{
+    background: #fff;
+  }
+  
+input{
+      position: absolute;
+      visibility: hidden;
+  }
+  
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+  }
+  
+.slide{
+    width: 20%;
+    transition: 0.6s;
+  }
+.slide img{
+    width: 100%;
+    height: 100%;
+  }
+  
+#a1:checked ~ .s1{
+    margin-left: 0;
+  }
+#a2:checked ~ .s1{
+    margin-left: -20%;
+  }
+#a3:checked ~ .s1{
+    margin-left: -40%;
+  }
+#a4:checked ~ .s1{
+    margin-left: -60%;
+  }
+#a5:checked ~ .s1{
+    margin-left: -80%;
+  }
+
+#b1:checked ~ .s2{
+    margin-left: 0;
+  }
+#b2:checked ~ .s2{
+    margin-left: -20%;
+  }
+#b3:checked ~ .s2{
+    margin-left: -40%;
+  }
+#b4:checked ~ .s2{
+    margin-left: -60%;
+  }
+#b5:checked ~ .s2{
+    margin-left: -80%;
+  }
+
+#c1:checked ~ .s3{
+    margin-left: 0;
+  }
+#c2:checked ~ .s3{
+    margin-left: -20%;
+  }
+#c3:checked ~ .s3{
+    margin-left: -40%;
+  }
+#c4:checked ~ .s3{
+    margin-left: -60%;
+  }
+#c5:checked ~ .s3{
+    margin-left: -80%;
+  }
+
+#d1:checked ~ .s4{
+    margin-left: 0;
+  }
+#d2:checked ~ .s4{
+    margin-left: -20%;
+  }
+#d3:checked ~ .s4{
+    margin-left: -40%;
+  }
+#d4:checked ~ .s4{
+    margin-left: -60%;
+  }
+#d5:checked ~ .s4{
+    margin-left: -80%;
+  }
